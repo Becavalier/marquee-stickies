@@ -10,6 +10,7 @@ let globalContent, counter = 1;
 const styles = document.createElement('style');
 styles.innerText = `html, body {font-family: sans-serif; background-color: transparent;}#app {color: #24292e;font-weight: bold;font-size: 19px;}`;
 document.head.appendChild(styles);
+document.title = 'Marquee Stickies';
 
 ipcRenderer.on('asynchronous-message', (event, configFilePath) => {
   if (!globalContent) {
@@ -17,7 +18,9 @@ ipcRenderer.on('asynchronous-message', (event, configFilePath) => {
     globalContent = fs.readFileSync(configFilePath.filePaths[DEFAULT_INDEX], {
       encoding: 'utf8', 
       flag: 'r',
-    }).split('\n').map(s => s.trim());
+    }).split('\n').map(s => {
+      return s.trim().replace('  ', '\n')
+    });
     if (Array.isArray(globalContent) && globalContent.length > 0) {
       const el = document.querySelector('#app');
       el.innerText = globalContent[DEFAULT_INDEX];

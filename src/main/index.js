@@ -13,7 +13,6 @@ function createMainWindow() {
   const window = new BrowserWindow({
     maximizable: false,
     resizable: false,
-    alwaysOnTop: true,
     fullscreenable: false,
     frame: false,
     title: 'Marquee Stickies',
@@ -22,8 +21,8 @@ function createMainWindow() {
     darkTheme: true,
     x: 60,
     y: 40,
-    width: 1500,
-    height: 50,
+    width: 1000,
+    height: 65,
     transparent: true,
     webPreferences: { nodeIntegration: true, }})
 

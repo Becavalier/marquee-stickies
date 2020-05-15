@@ -6,6 +6,10 @@
     "webpack": "~4.42.1"
   },
   "name": "marquee-stickies",
+  "productName": "Marquee Stickies",
+  "electronWebpack": {
+    "title": "Marquee Stickies"
+  },
   "description": "A stickies application for displaying text in a rolling way like &lt;marquee> markup.",
   "version": "1.0.0",
   "scripts": {
