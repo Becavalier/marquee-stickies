@@ -1,0 +1,34 @@
+{
+  "devDependencies": {
+    "electron": "8.2.0",
+    "electron-builder": "^22.4.1",
+    "electron-webpack": "^2.8.2",
+    "webpack": "~4.42.1"
+  },
+  "name": "marquee-stickies",
+  "description": "A stickies application for displaying text in a rolling way like &lt;marquee> markup.",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "electron-webpack dev",
+    "compile": "electron-webpack",
+    "dist": "npm run compile && electron-builder",
+    "dist:dir": "npm run dist --dir -c.compression=store -c.mac.identity=null"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Becavalier/marquee-stickies.git"
+  },
+  "keywords": [
+    "Stickies",
+    "Macos"
+  ],
+  "author": "YHSPY",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Becavalier/marquee-stickies/issues"
+  },
+  "homepage": "https://github.com/Becavalier/marquee-stickies#readme",
+  "dependencies": {
+    "source-map-support": "^0.5.19"
+  }
+}
